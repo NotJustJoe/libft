@@ -45,7 +45,9 @@ char		**ft_split(char const *str, char set)
 	j = 0;
 	count = 0;
 	i = 0;
-	if (!(tab = ft_calloc(sizeof(char *), (ft_countwords((char *)str, set) + 1))))
+	if (ft_strlen(str) == 0)
+		tab = ft_calloc(sizeof(tab), 1);
+	else if (!(tab = ft_calloc(sizeof(tab), (ft_countwords((char *)str, set) + 1))))
 		return (NULL);
 	while (str[i])
 	{
