@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/11 16:10:21 by trofidal          #+#    #+#             */
-/*   Updated: 2021/02/11 16:10:21 by trofidal         ###   ########.fr       */
+/*   Created: 2021/03/02 14:29:02 by trofidal          #+#    #+#             */
+/*   Updated: 2021/03/02 14:29:02 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
 	int i;
 	int b;
