@@ -53,7 +53,8 @@ char		*ft_itoa(int n)
 
 	nb = (long)n;
 	i = ft_crakito(nb) - 1;
-	str = ft_calloc(sizeof(char), i + 2);
+	if (!(str = ft_calloc(sizeof(char), i + 2)))
+		return (NULL);
 	if (nb == 0)
 	{
 		str[0] = '0';

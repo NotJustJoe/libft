@@ -16,8 +16,7 @@ char	*ft_strnew(size_t size)
 {
 	char	*tab;
 
-	tab = malloc(sizeof(char) * size);
-	if (tab == NULL)
+	if (!(tab = ft_calloc(sizeof(char) , size)))
 		return (NULL);
 	ft_strclr(tab);
 	return (tab);

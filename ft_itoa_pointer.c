@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_pointer.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 15:57:26 by trofidal          #+#    #+#             */
-/*   Updated: 2021/02/17 15:57:26 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/05 16:31:30 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ char		*ft_itoa_pointer(long long int n, char *base)
     
 	nb = (long long int)n;
 	i = ft_lencheck(nb, base) - 1; 
-	str = ft_calloc(sizeof(char), i + 2);
+	if (!(str = ft_calloc(sizeof(char), i + 2)))
+		return (NULL);
 	if (nb == 0)
 	{
 		str[0] = '0';

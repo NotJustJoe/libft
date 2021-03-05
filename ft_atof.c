@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 16:50:42 by trofidal          #+#    #+#             */
-/*   Updated: 2021/03/02 14:26:21 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/05 16:30:22 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ long double				ft_atof(const char *str)
 	long long int		power;
 	unsigned long long	value;
 
-	toatoi = malloc(sizeof(char *) * (ft_strlen(str) + 1));
+	if (!(toatoi = ft_calloc(sizeof(char *) , (ft_strlen(str) + 1))))
+		return (0);
 	power = ft_check_digit((char *)str);
 	toatoi = ft_strclrstr((char *)str);
 	value = ft_atoi(toatoi);

@@ -47,7 +47,6 @@ char		**ft_split(char const *str, char set)
 	i = 0;
 	if (!(tab = ft_calloc(sizeof(char *), (ft_countwords((char *)str, set) + 1))))
 		return (NULL);
-	tab[0] = 0;
 	while (str[i])
 	{
 		j = 0;
@@ -63,21 +62,4 @@ char		**ft_split(char const *str, char set)
 	}
 	tab[count] = 0;
 	return (tab);
-}
-
-int main()
-{
-	char **tab;
-	tab = ft_split("salut,hello,world,couco,bonjo,", ',');
-	int i;
-
-	i = 0;
-	while (i < 5)
-	{
-		printf("%s\n", tab[i]);
-		free(tab[i]);
-		i++;
-	}
-	free(tab);
-	return (0);
 }
