@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/28 11:10:43 by trofidal          #+#    #+#             */
-/*   Updated: 2021/03/06 22:00:59 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/06 22:15:08 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 char    *ft_putnbr_float(long double nbr)
 { 
-    int i;
     unsigned long long int start;
     unsigned long long int end;
     char *final;
