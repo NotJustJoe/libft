@@ -6,9 +6,11 @@
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 15:57:26 by trofidal          #+#    #+#             */
-/*   Updated: 2021/03/05 16:31:30 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/06 23:53:52 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 #include "libft.h"
 
@@ -54,8 +56,10 @@ char		*ft_itoa_pointer(long long int n, char *base)
     
 	nb = (long long int)n;
 	i = ft_lencheck(nb, base) - 1; 
-	if (!(str = ft_calloc(sizeof(char), i + 2)))
-		return (NULL);
+	if (n < 0)
+		str = ft_calloc(sizeof(str), i + 1);
+	else
+		str = ft_calloc(sizeof(str), i);
 	if (nb == 0)
 	{
 		str[0] = '0';
@@ -69,4 +73,4 @@ char		*ft_itoa_pointer(long long int n, char *base)
 	}
 	str = ft_iteration(str, neg, i, base); 
 	return (str);
-} 
+}
