@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 22:21:06 by trofidal          #+#    #+#             */
-/*   Updated: 2021/03/05 16:49:07 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/08 00:24:00 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ char				*ft_itoa_pointer(long long int n, char *base);
 char				*ft_strclrstr(char *str);
 char				*ft_strclrnbr(char *str);
 char				*ft_putnbr_float(long double nbr); 
+char				*ft_stradd_char(char *dest, char a);
+char				*ft_long_itoa(long long int n);
 /*
 **SIZE_T FUNCTIONS
 */
@@ -109,6 +111,7 @@ int					ft_charcmp(char s1, char s2);
 int					ft_charcmp(char s1, char s2);
 int					ft_find_char(char c,char *str);
 int					ft_recursive_power(int nb, int power);
+long long int		ft_long_atoi(const char *str);
 /*
 **T_LIST
 */
@@ -117,5 +120,9 @@ t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), \
 void (*del)(void *));
+/*
+**LONG DOUBLE
+*/
+long double			ft_atof(const char *str);
 
 #endif
