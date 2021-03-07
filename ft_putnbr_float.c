@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/28 11:10:43 by trofidal          #+#    #+#             */
-/*   Updated: 2021/03/07 20:05:29 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/07 20:35:30 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ static char    *ft_free_and_zero(char *ptr, char *str)
 unsigned long long int      ft_get_numb(long double nbr)
 {
     unsigned long long int start;
+    
+    nbr += 0.000001;
     if (nbr < 0)
         start = -nbr * 1000000;
     else
@@ -83,7 +85,6 @@ char    *ft_putnbr_float(long double nbr)
     final[ft_strlen(final)] = '.';
     str = ft_itoa((int)end);
     ptr = str;
-    printf("%s\n", str);
     str = ft_free_and_zero(ptr, str);
     if (nbr < 0)
         ft_get_minus(final);
