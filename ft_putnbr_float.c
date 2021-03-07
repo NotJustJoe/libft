@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/28 11:10:43 by trofidal          #+#    #+#             */
-/*   Updated: 2021/03/06 22:15:08 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/07 20:05:29 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,31 @@ static char    *ft_free_and_zero(char *ptr, char *str)
     return (str);
 }
 
+unsigned long long int      ft_get_numb(long double nbr)
+{
+    unsigned long long int start;
+    if (nbr < 0)
+        start = -nbr * 1000000;
+    else
+        start = nbr * 1000000;
+    return (start);
+}
+
+char    *ft_get_minus(char *str)
+{
+    char *temp;
+    int i;
+
+    i = ft_strlen(str);
+    temp = ft_calloc(sizeof(temp), i);
+    temp = ft_strcpy(temp, str);
+    ft_memset((void *)str, 0, i);
+    str[0] = '-';
+    str = ft_strcat(str, temp);
+    free (temp);
+    return (str);
+}
+
 char    *ft_putnbr_float(long double nbr)
 { 
     unsigned long long int start;
@@ -48,10 +73,7 @@ char    *ft_putnbr_float(long double nbr)
     char *str;
     char *ptr;
 
-    if (nbr < 0)
-        start = -nbr * 1000000;
-    else
-        start = nbr * 1000000;
+    start = ft_get_numb(nbr);
     end = start % 1000000;
     start /= 1000000;
     str = ft_itoa((int)start);
@@ -61,7 +83,10 @@ char    *ft_putnbr_float(long double nbr)
     final[ft_strlen(final)] = '.';
     str = ft_itoa((int)end);
     ptr = str;
+    printf("%s\n", str);
     str = ft_free_and_zero(ptr, str);
+    if (nbr < 0)
+        ft_get_minus(final);
     ft_strcat(final, str);
     free (str);
     return (final);
