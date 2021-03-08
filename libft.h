@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 22:21:06 by trofidal          #+#    #+#             */
-/*   Updated: 2021/03/08 00:24:00 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/08 08:52:13 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ char				*ft_itoa_unsigned(unsigned int n);
 char				*ft_itoa_pointer(long long int n, char *base);
 char				*ft_strclrstr(char *str);
 char				*ft_strclrnbr(char *str);
-char				*ft_putnbr_float(long double nbr); 
+char    			*ft_putnbr_float(double nbr);
 char				*ft_stradd_char(char *dest, char a);
 char				*ft_long_itoa(long long int n);
 /*

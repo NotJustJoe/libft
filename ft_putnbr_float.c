@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/28 11:10:43 by trofidal          #+#    #+#             */
-/*   Updated: 2021/03/07 20:35:30 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/08 08:51:48 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ static char    *ft_free_and_zero(char *ptr, char *str)
     return (str);
 }
 
-unsigned long long int      ft_get_numb(long double nbr)
+long long int      ft_get_numb(double nbr)
 {
-    unsigned long long int start;
+    long long int start;
     
     nbr += 0.000001;
     if (nbr < 0)
@@ -67,10 +67,10 @@ char    *ft_get_minus(char *str)
     return (str);
 }
 
-char    *ft_putnbr_float(long double nbr)
+char    *ft_putnbr_float(double nbr)
 { 
-    unsigned long long int start;
-    unsigned long long int end;
+    long long int start;
+    long long int end;
     char *final;
     char *str;
     char *ptr;
@@ -78,12 +78,12 @@ char    *ft_putnbr_float(long double nbr)
     start = ft_get_numb(nbr);
     end = start % 1000000;
     start /= 1000000;
-    str = ft_itoa((int)start);
+    str = ft_long_itoa(start);
     final = ft_calloc(sizeof(final), (6 + ft_strlen(str)));
     final = ft_strcpy(final, str);
     free (str);
     final[ft_strlen(final)] = '.';
-    str = ft_itoa((int)end);
+    str = ft_long_itoa(end);
     ptr = str;
     str = ft_free_and_zero(ptr, str);
     if (nbr < 0)
