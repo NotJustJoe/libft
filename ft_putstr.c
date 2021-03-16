@@ -6,13 +6,13 @@
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 15:46:15 by trofidal          #+#    #+#             */
-/*   Updated: 2021/02/18 15:46:15 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/16 11:27:48 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putstr(const char *str)
+void	ft_putstr(const char *str)
 {
-    write(1, &str[0], ft_strlen(str));
+	write(1, &str[0], ft_strlen(str));
 }

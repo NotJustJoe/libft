@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/07 23:50:12 by trofidal          #+#    #+#             */
-/*   Updated: 2021/03/07 23:59:20 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/16 10:46:06 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static char	*ft_iteration(char *str, long long int neg, long long int i)
 	return (str);
 }
 
-char		*ft_long_itoa(long long int n)
+char	*ft_long_itoa(long long int n)
 {
 	long long int	i;
 	long long int	nb;
@@ -53,7 +53,8 @@ char		*ft_long_itoa(long long int n)
 
 	nb = n;
 	i = ft_crakito(nb) - 1;
-	if (!(str = ft_calloc(sizeof(char), i + 2)))
+	str = ft_calloc(sizeof(char), i + 2);
+	if (!str)
 		return (NULL);
 	if (nb == 0)
 	{

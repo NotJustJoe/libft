@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-static long	ft_crakito(long n)
+static long int	ft_crakito(long n)
 {
-	long	nb;
-	long	len;
+	long int	nb;
+	long int	len;
 
 	len = 0;
 	nb = n;
@@ -44,7 +44,7 @@ static char	*ft_iteration(char *str, unsigned int neg, long i)
 	return (str);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	long			i;
 	long			nb;
@@ -53,7 +53,8 @@ char		*ft_itoa(int n)
 
 	nb = (long)n;
 	i = ft_crakito(nb) - 1;
-	if (!(str = ft_calloc(sizeof(char), i + 2)))
+	str = ft_calloc(sizeof(char), i + 2);
+	if (!str)
 		return (NULL);
 	if (nb == 0)
 	{

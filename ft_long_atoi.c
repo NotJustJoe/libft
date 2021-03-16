@@ -6,17 +6,17 @@
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 00:10:37 by trofidal          #+#    #+#             */
-/*   Updated: 2021/03/08 00:23:39 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/16 10:44:37 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long long int		ft_long_atoi(const char *str)
+long long int	ft_long_atoi(const char *str)
 {
-	long long int i;
-	int b;
-	int signe;
+	long long int	i;
+	int				b;
+	int				signe;
 
 	signe = 1;
 	b = 0;

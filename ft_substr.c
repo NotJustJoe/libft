@@ -20,12 +20,14 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	str_len = ft_strlen(str) - start;
 	if (len > str_len)
 		len = str_len;
-	if (!(ptr = ft_calloc(sizeof(char), 1)))
+	ptr = ft_calloc(sizeof(char), 1);
+	if (!ptr)
 		return (NULL);
 	if (start < ft_strlen(str))
 	{
 		free(ptr);
-		if (!(ptr = ft_calloc(sizeof(char), len + 1)))
+		ptr = ft_calloc(sizeof(char), len + 1);
+		if (!ptr)
 			return (NULL);
 		ptr = ft_strncpy(ptr, str + start, len);
 	}

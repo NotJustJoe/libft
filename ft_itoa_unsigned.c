@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 15:57:26 by trofidal          #+#    #+#             */
-/*   Updated: 2021/03/05 16:31:44 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/16 10:56:33 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,23 +44,24 @@ static char	*ft_iteration(char *str, unsigned int neg, long i)
 	return (str);
 }
 
-char		*ft_itoa_unsigned(unsigned int n)
+char	*ft_itoa_unsigned(unsigned int n)
 {
-	unsigned int			i;
-	unsigned int			nb;
+	unsigned int	i;
+	unsigned int	nb;
 	unsigned int	neg;
 	char			*str;
 
 	nb = (unsigned int)n;
 	i = ft_lencheck(nb) - 1;
-	if (!(str = ft_calloc(sizeof(char), i + 2)))
+	str = ft_calloc(sizeof(char), i + 2);
+	if (!str)
 		return (NULL);
 	if (nb == 0)
 	{
 		str[0] = '0';
 		return (str);
 	}
-	neg = nb; 
+	neg = nb;
 	str = ft_iteration(str, neg, i);
 	return (str);
 }

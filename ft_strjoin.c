@@ -15,8 +15,13 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ptr;
+	int		a;
+	int		b;
 
-	if (!(ptr = ft_calloc(sizeof(char), (ft_strlen(s1) + ft_strlen(s2) + 1))))
+	a = ft_strlen(s1);
+	b = ft_strlen(s2);
+	ptr = ft_calloc(sizeof(char), (a + b + 1));
+	if (!ptr)
 		return (NULL);
 	ptr = ft_strcpy(ptr, s1);
 	ptr = ft_strcat((char *)ptr, s2);

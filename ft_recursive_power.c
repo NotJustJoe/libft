@@ -6,13 +6,13 @@
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/01 16:58:01 by trofidal          #+#    #+#             */
-/*   Updated: 2021/03/01 16:58:10 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/16 11:27:29 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_recursive_power(int nb, int power)
+int	ft_recursive_power(int nb, int power)
 {
 	if (power < 0)
 		return (0);

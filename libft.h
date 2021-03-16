@@ -6,7 +6,7 @@
 /*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 22:21:06 by trofidal          #+#    #+#             */
-/*   Updated: 2021/03/12 10:56:35 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/03/16 11:06:36 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@
 # include <stdarg.h> /* FOR PRINTF */
 # define BUFF_SIZE 32
 
-typedef	struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}					t_list;
+}	t_list;
 
 /*
 **VOID FUNCTIONS
@@ -54,10 +54,10 @@ void				ft_lstclear(t_list **lst, void (*del) (void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 void				ft_putstr(const char *str);
 void				ft_putchar(char c);
-void     			ft_putnbr_base(long long int nbr, char *base);
+void				ft_putnbr_base(long long int nbr, char *base);
 /*
 **CHAR FUNCTIONS
-*/ 
+*/
 char				*ft_strnew(size_t size);
 char				*ft_strncat(char *dest, const char *src, size_t n);
 char				*ft_strcat(char *dest, const char *src);
@@ -77,12 +77,12 @@ char				*ft_itoa(int n);
 char				*ft_strndup(const char *s, size_t n);
 char				**ft_split(char const *str, char set);
 char				*ft_strclrstr(char *str);
-char				*ft_itoa_base(long long int n, char *base);
+char				*ft_itoa_base(unsigned long long int n, char *base);
 char				*ft_itoa_unsigned(unsigned int n);
 char				*ft_itoa_pointer(long long int n, char *base);
 char				*ft_strclrstr(char *str);
 char				*ft_strclrnbr(char *str);
-char    			*ft_putnbr_float(double nbr);
+char				*ft_putnbr_float(double nbr);
 char				*ft_stradd_char(char *dest, char a);
 char				*ft_long_itoa(long long int n);
 /*
@@ -110,7 +110,7 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 int					ft_lstsize(t_list *lst);
 int					ft_charcmp(char s1, char s2);
 int					ft_charcmp(char s1, char s2);
-int					ft_find_char(char c,char *str);
+int					ft_find_char(char c, char *str);
 int					ft_recursive_power(int nb, int power);
 long long int		ft_long_atoi(const char *str);
 /*

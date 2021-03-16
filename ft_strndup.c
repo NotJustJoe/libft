@@ -16,7 +16,8 @@ char	*ft_strndup(const char *s, size_t n)
 {
 	char	*str;
 
-	if (!(str = (char *)ft_calloc(sizeof(char) , n + 1)))
+	str = (char *)ft_calloc(sizeof(char), n + 1);
+	if (!str)
 		return (NULL);
 	str = ft_strncpy(str, s, n);
 	return (str);

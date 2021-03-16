@@ -16,7 +16,8 @@ char	*ft_strdup(const char *s)
 {
 	char	*str;
 
-	if (!(str = (char *)ft_calloc(sizeof(char) , ft_strlen((char *)s) + 1)))
+	str = (char *)ft_calloc(sizeof(char), ft_strlen((char *)s) + 1);
+	if (!str)
 		return (NULL);
 	else
 		str = ft_strcpy(str, s);

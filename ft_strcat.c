@@ -14,8 +14,8 @@
 
 char	*ft_strcat(char *dest, const char *src)
 {
-	unsigned int i;
-	unsigned int d;
+	unsigned int	i;
+	unsigned int	d;
 
 	d = 0;
 	i = 0;

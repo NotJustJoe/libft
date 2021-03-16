@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *ptr;
-	t_list *ptr2;
+	t_list	*ptr;
+	t_list	*ptr2;
 
 	ptr2 = NULL;
 	if (!lst)
@@ -30,4 +30,3 @@ t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (ptr2);
 }
-
