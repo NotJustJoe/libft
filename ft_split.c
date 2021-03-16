@@ -19,6 +19,8 @@ static int	ft_countwords(char *str, char set)
 
 	count = 0;
 	i = 0;
+	if (ft_strlen(str) == 0)
+		return (0);
 	if (str[0] != set)
 		count++;
 	while (str[i])
@@ -35,17 +37,6 @@ static int	ft_countwords(char *str, char set)
 	return (count);
 }
 
-static char	*ft_get_malloc(char *tab, char *str, char *set)
-{
-	if (ft_strlen(str) == 0)
-		tab = ft_calloc(sizeof(tab), 1);
-	else
-		tab = ft_calloc(sizeof(tab), (ft_countwords((char *)str, set) + 1));
-	if (!tab)
-		return (NULL);
-	return (tab);
-}
-
 char	**ft_split(char const *str, char set)
 {
 	char	**tab;
@@ -53,9 +44,9 @@ char	**ft_split(char const *str, char set)
 	int		count;
 	int		j;
 
-	count = -1;
+	count = 0;
 	i = -1;
-	tab = ft_get_malloc(tab, str, set);
+	tab = ft_calloc(sizeof(tab), (ft_countwords((char *)str, set) + 1));
 	if (!tab)
 		return (NULL);
 	while (str[++i])
@@ -65,7 +56,7 @@ char	**ft_split(char const *str, char set)
 		{
 			while (str[i + j] != set && str[i + j] != '\0')
 				j++;
-			tab[++count] = ft_strndup(str + i, j);
+			tab[count++] = ft_strndup(str + i, j);
 			i = i + j - 1;
 		}
 	}
