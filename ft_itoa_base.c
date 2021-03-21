@@ -12,23 +12,38 @@
 
 #include "libft.h"
 
-char	*ft_itoa_base(unsigned long long int n, char *base)
+char	*ft_rev_tab(char *rev, int i)
 {
 	char	*res;
-	char	*rev;
-	int		i;
 	int		j;
+
+	j = 0;
+	res = ft_calloc(sizeof(res), i);
+	i--;
+	while (i >= 0)
+	{
+		res[j] = rev[i];
+		i--;
+		j++;
+	}
+	res[j] = '\0';
+	return (res);
+}
+
+char	*ft_itoa_base(unsigned long long int n, char *base)
+{
+	char	*rev;
+	char	*res;
+	int		i;
 	int		len;
 	int		remain;
 
-	rev = ft_calloc(sizeof(rev), 64);
 	i = 0;
-	j = 0;
-	len = 0;
 	remain = 0;
+	len = ft_strlen(base);
+	rev = ft_calloc(sizeof(rev), 64);
 	if (!rev)
 		return (NULL);
-	len = ft_strlen(base);
 	while (n > 0)
 	{
 		remain = n % len;
@@ -39,15 +54,7 @@ char	*ft_itoa_base(unsigned long long int n, char *base)
 		n = n / len;
 		i++;
 	}
-	res = ft_calloc(sizeof(res), i);
-	i--;
-	while (i >= 0)
-	{
-		res[j] = rev[i];
-		i--;
-		j++;
-	}
-	res[j] = '\0';
+	res = ft_rev_tab(rev, i);
 	free(rev);
 	return (res);
 }
