@@ -17,6 +17,8 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	char	*ptr;
 	size_t	str_len;
 
+	if (!str)
+		return (NULL);
 	str_len = ft_strlen(str) - start;
 	if (len > str_len)
 		len = str_len;

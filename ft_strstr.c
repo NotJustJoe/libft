@@ -22,9 +22,9 @@ char	*ft_strstr(const char *meule_de_foin, const char *aiguille)
 		return ((char *)meule_de_foin);
 	while (meule_de_foin[i])
 	{
+		a = 0;
 		if (meule_de_foin[i] == aiguille[a])
 		{
-			a = 0;
 			while (meule_de_foin[i + a] == aiguille[a])
 			{
 				if (aiguille[a + 1] == '\0')
