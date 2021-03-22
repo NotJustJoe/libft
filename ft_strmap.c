@@ -17,7 +17,11 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char		*str;
 	int			i;
 
+	if (!s)
+		return (NULL);
 	str = ft_strdup(s);
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (str[i])
 	{
