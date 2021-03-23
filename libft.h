@@ -124,6 +124,6 @@ void (*del)(void *));
 /*
 **LONG DOUBLE
 */
-long double			ft_atof(const char *str);
+double				ft_atof(const char *str);
 
 #endif

@@ -37,13 +37,13 @@ static long long int	ft_check_digit(char *str)
 	return (pow);
 }
 
-long double	ft_atof(const char *str)
+double	ft_atof(const char *str)
 {
 	char				*toatoi;
 	char				*ptr;
-	long double			digit;
+	double			digit;
 	long long int		power;
-	unsigned long long	value;
+	long long int	value;
 
 	toatoi = ft_calloc(sizeof(char *), (ft_strlen(str) + 1));
 	if (!(toatoi))
@@ -51,7 +51,7 @@ long double	ft_atof(const char *str)
 	ptr = toatoi;
 	power = ft_check_digit((char *)str);
 	toatoi = ft_strclrstr((char *)str);
-	value = ft_atoi(toatoi);
+	value = ft_long_atoi(toatoi);
 	free (toatoi);
 	digit = value;
 	free (ptr);
