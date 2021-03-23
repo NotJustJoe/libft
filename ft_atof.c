@@ -41,9 +41,9 @@ double	ft_atof(const char *str)
 {
 	char				*toatoi;
 	char				*ptr;
-	double			digit;
+	double				digit;
 	long long int		power;
-	long long int	value;
+	long long int		value;
 
 	toatoi = ft_calloc(sizeof(char *), (ft_strlen(str) + 1));
 	if (!(toatoi))

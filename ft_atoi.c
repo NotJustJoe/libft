@@ -21,8 +21,8 @@ static int	ft_return(int signe)
 
 static int	ft_lenstr(const char *str)
 {
-	char *ret;
-	int a;
+	char	*ret;
+	int		a;
 
 	ret = ft_strclrstr((char *)str);
 	a = ft_strlen(ret);
