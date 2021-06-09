@@ -89,7 +89,8 @@ SRC =	ft_atoi.c				\
 		ft_strmap.c				\
 		ft_stradd_char.c		\
 		ft_long_itoa.c			\
-		ft_long_atoi.c
+		ft_long_atoi.c			\
+		ft_free.c
 
 
 BONUS = ft_lstsize.c		\
