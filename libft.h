@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 22:21:06 by trofidal          #+#    #+#             */
-/*   Updated: 2021/03/16 11:06:36 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/05/31 12:41:38 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 void				ft_putstr(const char *str);
 void				ft_putchar(char c);
 void				ft_putnbr_base(long long int nbr, char *base);
+void				ft_free(void *ptr);
 /*
 **CHAR FUNCTIONS
 */

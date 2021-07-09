@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trofidal <trofidal@student.42nice.fr>      +#+  +:+       +#+        */
+/*   By: trofidal <trofidal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 12:40:17 by trofidal          #+#    #+#             */
-/*   Updated: 2021/05/31 12:41:15 by trofidal         ###   ########.fr       */
+/*   Updated: 2021/07/09 06:32:15 by trofidal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_free(void *ptr)
+void	ft_free(void *ptr)
 {
-    if (ptr == NULL)
-        return ;
-    free(ptr);
-    ptr = NULL;
+	if (ptr == NULL)
+		return ;
+	free(ptr);
+	ptr = NULL;
 }

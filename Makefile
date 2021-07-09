@@ -114,8 +114,8 @@ INC = ./inc/
 $(NAME): $(OBJ)
 				ar -rcs $(NAME) $(OBJ)
 
-%.o: %.c
-				$(CC) -I. -o $@ -c $? $(CFLAGS)
+$(OBJ_P)/%.o: %.c
+				$(CC) $(CFLAGS) -c -o $@ $<
 
 all: $(NAME)
 
